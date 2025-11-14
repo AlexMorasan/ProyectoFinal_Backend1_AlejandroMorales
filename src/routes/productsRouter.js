@@ -89,9 +89,9 @@ router.post("/", async (req, res) => {
         res.setHeader("Content-Type", "application/json");
         //realizar emit aqui, resolver que el socket esta en app
         /* req.socket.emit("nuevoProducto",nuevoProducto) */
-        const productosActualizados = await ProductManager.getProducts();
+        /* const productosActualizados = await ProductManager.getProducts(); */
         req.socket.emit("nuevoProducto",productosActualizados)
-        req.socket.emit("actualizarProductos",productos)
+       /*  req.socket.emit("actualizarProductos",productos) */
         return res.status(200).json({
             payload: `Producto con código ${code} creado con éxito 😁!!`,
             nuevoProducto

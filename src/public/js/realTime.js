@@ -1,10 +1,11 @@
 const socket=io()
 const list = document.getElementById(`product-list`)
 
-socket.on(`actualizarProductos`,productos=>{
+socket.on("actualizarProductos",productos=>{
+    list.innerHTML="";
     productos.forEach(p => {
-        const li=document.createElement(`li`)
-        li.textContent=`${p.title} --- $${p.price}`
+        const li=document.createElement("li")
+        li.textContent=`${p.title} --- $${p.price}`;
         list.appendChild(li)
     });
 })

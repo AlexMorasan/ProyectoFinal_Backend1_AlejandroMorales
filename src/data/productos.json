@@ -1,19 +1,5 @@
 [
      {
-          "id": "1",
-          "title": "Balón de fútbol profesional",
-          "description": "Balón tamaño 5, ideal para entrenamientos y partidos oficiales. Material resistente al desgaste.",
-          "code": "FUTB2030",
-          "price": 500,
-          "estatus": true,
-          "stock": 120,
-          "category": "Fútbol",
-          "thumbnails": [
-               "src/imagenes/balon_futbol_1.jpg",
-               "src/imagenes/balon_futbol_2.jpg"
-          ]
-     },
-     {
           "id": "2",
           "title": "Raqueta de tenis de grafito",
           "description": "Raqueta ligera y resistente, diseñada para jugadores intermedios y avanzados.",
@@ -83,32 +69,6 @@
           "title": "Barar Z de 100 kg",
           "description": "Barra Z con 2 discos de 50 kg",
           "code": "BARRAZ100KG",
-          "price": 6400,
-          "estatus": true,
-          "stock": 40,
-          "category": "Entrenamiento",
-          "thumbnails": [
-               "src/imagenes/pesas_10kg_1.jpg"
-          ]
-     },
-     {
-          "id": 9,
-          "title": "Barar Z de 100 kg",
-          "description": "Barra Z con 2 discos de 50 kg",
-          "code": "BARRAZ101290KG",
-          "price": 6400,
-          "estatus": true,
-          "stock": 40,
-          "category": "Entrenamiento",
-          "thumbnails": [
-               "src/imagenes/pesas_10kg_1.jpg"
-          ]
-     },
-     {
-          "id": 10,
-          "title": "Barar Z de 100 kg",
-          "description": "Barra Z con 2 discos de 50 kg",
-          "code": "BARRAraraZ101290KG",
           "price": 6400,
           "estatus": true,
           "stock": 40,

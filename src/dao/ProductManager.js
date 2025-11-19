@@ -1,4 +1,6 @@
 const fs=require("fs")
+/* import { ProductModel } from "../models/Productschema" */
+const ProductModel = require ("../models/Productschema")
 class ProductManager{
     static path="./productos.json"
 

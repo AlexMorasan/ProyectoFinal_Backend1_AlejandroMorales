@@ -2,6 +2,11 @@ const{ProductManager} = require(`../dao/ProductManager`)
 const Router = require(`express`).Router
 const router = Router()
 
+const isValidNumber = value => typeof value === "number" && !isNaN(value);
+const isBoolean = value => typeof value === "boolean";
+const camposString = ["title","description","code","category"]
+
+
 router.get(`/`,async(req,res)=>{
     let {cantidad}=req.query
     try{
@@ -110,17 +115,21 @@ router.post("/realTimeProducts/addProduct",async (req,res)=>{
             title, description, code, price, estatus, stock, category, thumbnails
         );
 
-        res.setHeader("Content-Type", "application/json");
+        /* res.setHeader("Content-Type", "application/json"); */
         //realizar emit aqui, resolver que el socket esta en app
         /* req.socket.emit("nuevoProducto",nuevoProducto) */
         /* const productosActualizados = await ProductManager.getProducts(); */
-        req.socket.emit("nuevoProducto",productosActualizados)
+        /* req.socket.emit("nuevoProducto",productosActualizados) */
        /*  req.socket.emit("actualizarProductos",productos) */
-        return res.status(200).json({
+/*         return res.status(200).json({
             payload: `Producto con código ${code} creado con éxito 😁!!`,
             nuevoProducto
-        });
-    } catch (error) {
+        }); */
+        const productosActualizados = await ProductManager.getProducts()
+        req.io.emit("actualizarProductos",productosActualizados) 
+        res.redirect("/realTimeProducts");
+    } 
+    catch (error) {
         console.log(error);
         res.setHeader("Content-Type", "application/json");
         return res.status(500).json({ error: "Error interno del servidor" });

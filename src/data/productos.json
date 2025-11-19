@@ -1,18 +1,5 @@
 [
      {
-          "id": "2",
-          "title": "Raqueta de tenis de grafito",
-          "description": "Raqueta ligera y resistente, diseñada para jugadores intermedios y avanzados.",
-          "code": "TENISGRF",
-          "price": 850,
-          "estatus": true,
-          "stock": 75,
-          "category": "Tenis",
-          "thumbnails": [
-               "src/imagenes/raqueta_tenis_1.jpg"
-          ]
-     },
-     {
           "id": "4",
           "title": "Pesas hexagonales 10kg",
           "description": "Par de pesas con recubrimiento de goma para mayor seguridad y durabilidad.",
@@ -75,6 +62,19 @@
           "category": "Entrenamiento",
           "thumbnails": [
                "src/imagenes/pesas_10kg_1.jpg"
+          ]
+     },
+     {
+          "id": 9,
+          "title": "Raqueta de tenis de ALUMINIO",
+          "description": "Raqueta ligera y resistente, diseñada para jugadores intermedios y avanzados.",
+          "code": "TENISALMPRUEBA",
+          "price": 850,
+          "estatus": true,
+          "stock": 75,
+          "category": "Tenis",
+          "thumbnails": [
+               "src/imagenes/raqueta_tenis_1.jpg"
           ]
      }
 ]

@@ -4,7 +4,9 @@ const {engine}=require("express-handlebars")
 const {router: productRouter} = require("./routes/productsRouter.js")
 const {router: cartRouter} = require("./routes/cartRouter.js")
 const vistasRouter = require("./routes/viewsRouter.js")
-
+const mongoose = require("mongoose")
+//Mongo DB
+// mongodb+srv://AlexMorasan:codercoder@cluster0.gcfd0il.mongodb.net/?appName=Cluster0
 
 const PORT=8080
 
@@ -52,3 +54,12 @@ io.on("connection",(socket)=>{
     console.log(`Se ha conectado un cliente con id: ${socket.id} `)
     socket.emit("saludo", `Bienvenido! identificate`)
 })
+
+mongoose.connect("mongodb+srv://AlexMorasan:codercoder@cluster0.gcfd0il.mongodb.net/?appName=Cluster0")
+.then(()=>{
+    console.log("Conectado a la base de datos de Mongo Atlas" )
+})
+.catch(error=>{
+    console.error("La conexión no se ha podido realizar",error)
+})
+
